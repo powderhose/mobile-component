@@ -1,0 +1,136 @@
+@import "mobile";
+
+@p_font_size:0.14rem;
+@cart_row_one_width: 0.22rem;
+@cart_row_two_width: 0.92rem;
+@cart_row_three_width: 1.86rem;
+@cart_row_height: 0.98rem;
+@cart_photo_width: 0.66rem;
+@cart_photo_height: 0.79rem;
+@shop_cart_finish_details1_height: 0.50rem;
+@shop_cart_finish_details2_height: 0.24rem;
+@shop_cart_finish_details3_height: 0.24rem;
+@font-large: 0.16rem;
+@font-middle: 0.14rem;
+@font-small: 0.12rem;
+@font-color-09: #db2624;
+@font-color-05: #333333;
+@font-color-00: #999999;
+.p_row_10{
+  padding: 0 0.10rem;
+}
+.bg_red{
+  background-color: red;
+}
+.bg_green{
+  background-color: green;
+}
+.bg_black{
+  background-color: #000000;
+}
+.bg_yellow{
+  background-color: yellow;
+}
+.bg_a{
+  background-color: #007aff;
+}
+.bg_b{
+  background-color: #eeeeee;
+}
+.flex_center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  .p_row_10;
+  font-size: @p_font_size;
+}
+.shop_cart_finish{
+  @del: 0.20rem;
+  //使用flex布局的时候先给父容器设置display:flex
+  display: flex;
+  //排列方向水平,从右向左
+  flex-direction: row;
+  width: calc(~"100% - @{del}");
+  height: @cart_row_height;
+  .p_row_10;
+  .bg_red;
+}
+
+.shop_cart_finish_select{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: @cart_row_one_width;
+  .bg_black;
+}
+.shop_cart_finish_photo{
+  display: flex;
+  flex-direction: column;
+  //垂直居中
+  justify-content: center;
+  //水平居中
+  align-items: center;
+  width: @cart_row_two_width;
+  .bg_green;
+}
+.shop_cart_finish_details{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: @cart_row_three_width;
+  .bg_yellow;
+}
+
+//第一块区域布局
+.shop_cart_finish_select div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: @cart_row_one_width;
+  height: @cart_row_one_width;
+  .bg_green;
+  i{
+    font-size: 0.08rem;
+  }
+}
+//第一块布局结束
+
+//第二块布局
+.shop_cart_finish_photo div{
+  width: @cart_photo_width;
+  height: @cart_photo_height;
+  .flex_center;
+  .bg_yellow;
+  img{
+    width: 100%;
+  }
+}
+//第二块布局结束
+
+//第三块布局
+.shop_cart_finsh_article{
+  width: @cart_row_three_width;
+  height: @shop_cart_finish_details1_height;
+  font-size: @font-middle;
+  color: @font-color-05;
+  .bg_a;
+}
+.shop_cart_finsh_price{
+  width: @cart_row_three_width;
+  height: @shop_cart_finish_details2_height;
+  font-size: @font-middle;
+  color: @font-color-09;
+  .bg_b
+}
+.shop_cart_finsh_vip{
+  width: @cart_row_three_width;
+  height: @shop_cart_finish_details3_height;
+  font-size: @font-small;
+  color: @font-color-00;
+  .bg_green;
+}
+//第三块布局结束

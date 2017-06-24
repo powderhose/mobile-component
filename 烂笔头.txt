@@ -1,0 +1,12 @@
+使用flex布局的时候先给父容器设定:display: flex属性
+
+水平和垂直方向都居中的写法:
+
+.box{
+  display: flex;
+  flex-direction: column;
+  //垂直居中
+  justify-content: center;
+  //水平居中
+  align-items: center;
+}
