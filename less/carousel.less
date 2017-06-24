@@ -1,0 +1,19 @@
+@import "mobile";
+
+@slider_content_width: 400%;
+@bullet_active_color: #ffffff;
+@bullet_size: 0.08rem;
+.zlb_slider{
+  width: @slider_content_width;
+  height: auto;
+}
+.swiper-slide img{
+  width: 100%;
+}
+.swiper-pagination-bullet{
+  width: @bullet_size;
+  height: @bullet_size;
+}
+.swiper-pagination-bullet-active{
+  background-color: @bullet_active_color;
+}

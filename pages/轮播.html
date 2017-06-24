@@ -1,0 +1,38 @@
+<!--driver zhang_luBiao-->
+<!--2017/6/24-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播器</title>
+    <!-- 引入swiper的时候需要把样式也引进来-->
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css"/>
+    <link rel="stylesheet" href="../css/carousel.css"/>
+    <script type="text/javascript" src="../js/zlb_screen.js"></script>
+    <script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
+
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../images/slider1.jpg" alt=""/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/slider2.jpg" alt=""/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/slider1.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script>
+        <!-- swiper的分页器就是轮播上的小圆点-->
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 3000,//可选选项，自动滑动
+            pagination : '.swiper-pagination',
+        })
+    </script>
+</body>
+</html>
